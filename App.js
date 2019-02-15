@@ -1,13 +1,35 @@
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View, Button} from 'react-native';
 import Sound from 'react-native-sound';
-// import {audioconcat} from 'audioconcat';
+// import audioconcat from 'audioconcat';
 
 export default class App extends Component {
 
-   sound = new Sound('everything_changed.mp3');
+    // componentDidMount(){
+    //   console.log('componentDidMount called');
+    //   const songs = [
+    //                 'everything_changed.mp3',
+    //                 'fear_is_a_liar.mp3',
+    //                 'my_liberty.mp3'];
+    //   console.log('songs are',songs);
+    //    audioconcat(songs)
+    //    .concat('all.mp3')
+    //    .on('start', function (command) {
+    //      console.log('ffmpeg process started:', command)
+    //    })
+    //    .on('error', function (err, stdout, stderr) {
+    //      console.error('Error:', err)
+    //      console.error('ffmpeg stderr:', stderr)
+    //    })
+    //    .on('end', function (output) {
+    //      console.error('Audio created in:', output)
+    //    })
+    //    console.log('audioconcat result is',audioconcat);
+    // }
 
+  sound = new Sound('my_liberty.mp3');
    playSong = () => {
+     // console.log('playSong called');
      this.sound.play();
    }
    pauseSong = () => {
